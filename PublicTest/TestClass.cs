@@ -24,11 +24,11 @@ namespace DefaultNamespace
     //     // {
     //     // }
     // }
-    public abstract class TestClass // : Base
+    public class TestClass // : Base
     {
-        [HttpGet("{key}/riskTriggers")]
+        [HttpPost("{key}/riskTriggers")]
         [AuthorizeResource(RoleResource.Risk)]
-        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        public async Task<ProfileRiskTriggers> PostProfileRiskTriggersAsync(string key)
         {
             return null;
         }
