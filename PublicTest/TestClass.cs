@@ -12,12 +12,12 @@ namespace DefaultNamespace
 {
     public abstract class Base
     {
-        [HttpGet("{key}/riskTriggers")]
-        [AuthorizeResource(RoleResource.Risk)]
-        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
-        {
-            return null;
-        }
+        // [HttpGet("{key}/riskTriggers")]
+        // [AuthorizeResource(RoleResource.Risk)]
+        // public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        // {
+        //     return null;
+        // }
         
         // [HttpPost("f")]
         // public void Func2()
