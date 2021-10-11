@@ -17,11 +17,11 @@ namespace DefaultNamespace
         {
             return null;
         }
-        //
-        // [HttpPost("f")]
-        // public void Func2()
-        // {
-        // }
+        
+        [HttpPost("f")]
+        public void Func2()
+        {
+        }
     }
     public class TestClass : Base
     {
