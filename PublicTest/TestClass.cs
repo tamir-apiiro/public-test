@@ -15,5 +15,10 @@ namespace DefaultNamespace
         public void Foo(string a)
         {
         }
+        
+        [HttpPost("{c}/d")]
+        public void Bar(string c)
+        {
+        }
     }
 }
