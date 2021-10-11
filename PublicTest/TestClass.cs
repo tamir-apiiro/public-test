@@ -10,10 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DefaultNamespace
 {
-    public abstract class Base
+    public class Base
     {
         [HttpGet("{key}/riskTriggers")]
-        [AuthorizeResource(RoleResource.Risk)]
         public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
         {
             return null;
@@ -24,10 +23,9 @@ namespace DefaultNamespace
         {
         }
     }
-    public abstract class TestClass : Base
+    public class TestClass : Base
     {
         [HttpGet("{key}/riskTriggers")]
-        [AuthorizeResource(RoleResource.Risk)]
         public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
         {
             return null;
@@ -51,17 +49,5 @@ namespace DefaultNamespace
 
     public class ProfileRiskTriggers
     {
-    }
-    
-    public class AuthorizeResourceAttribute : AuthorizeAttribute
-    {
-        public AuthorizeResourceAttribute(RoleResource resourceType) : base(resourceType.ToString())
-        {
-        }
-    }
-
-    public enum RoleResource
-    {
-        Risk
     }
 }
