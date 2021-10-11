@@ -20,5 +20,10 @@ namespace DefaultNamespace
         public void Bar(string c)
         {
         }
+
+        [HttpPost("e")]
+        public void Func()
+        {
+        }
     }
 }
