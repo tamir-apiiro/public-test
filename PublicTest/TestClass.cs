@@ -19,10 +19,10 @@ namespace DefaultNamespace
             return null;
         }
         
-        [HttpPost("f")]
-        public void Func2()
-        {
-        }
+        // [HttpPost("f")]
+        // public void Func2()
+        // {
+        // }
     }
     public abstract class TestClass : Base
     {
@@ -33,20 +33,20 @@ namespace DefaultNamespace
             return null;
         }
         
-        [HttpGet("{a}/b")]
-        public void Foo(string a)
-        {
-        }
-        
-        [HttpPost("{c}/d")]
-        public void Bar(string c)
-        {
-        }
-
-        [HttpPost("e")]
-        public void Func()
-        {
-        }
+        // [HttpGet("{a}/b")]
+        // public void Foo(string a)
+        // {
+        // }
+        //
+        // [HttpPost("{c}/d")]
+        // public void Bar(string c)
+        // {
+        // }
+        //
+        // [HttpPost("e")]
+        // public void Func()
+        // {
+        // }
     }
 
     public class ProfileRiskTriggers
