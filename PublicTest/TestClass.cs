@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 // using JetBrains.Annotations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,13 @@ namespace DefaultNamespace
 {
     public class TestClass
     {
+        [HttpGet("{key}/riskTriggers")]
+        [AuthorizeResource(RoleResource.Risk)]
+        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        {
+            return null;
+        }
+        
         [HttpGet("{a}/b")]
         public void Foo(string a)
         {
@@ -25,5 +33,21 @@ namespace DefaultNamespace
         public void Func()
         {
         }
+    }
+
+    public class ProfileRiskTriggers
+    {
+    }
+    
+    public class AuthorizeResourceAttribute : AuthorizeAttribute
+    {
+        public AuthorizeResourceAttribute(RoleResource resourceType) : base(resourceType.ToString())
+        {
+        }
+    }
+
+    public enum RoleResource
+    {
+        Risk
     }
 }
