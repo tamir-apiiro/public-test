@@ -10,19 +10,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DefaultNamespace
 {
-    // public class Base
-    // {
-    //     [HttpGet("{key}/riskTriggers")]
-    //     public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
-    //     {
-    //         return null;
-    //     }
-    //     
-    //     [HttpPost("f")]
-    //     public void Func2()
-    //     {
-    //     }
-    // }
+    public class Base
+    {
+        [HttpGet("{key}/riskTriggers")]
+        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        {
+            return null;
+        }
+        
+        [HttpPost("f")]
+        public void Func2()
+        {
+        }
+    }
     public abstract class TestClass // : Base
     {
         [HttpGet("{key}/riskTriggers")]
