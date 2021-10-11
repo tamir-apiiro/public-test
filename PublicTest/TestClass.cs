@@ -10,7 +10,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DefaultNamespace
 {
-    public class TestClass
+    public abstract class Base
+    {
+        [HttpGet("{key}/riskTriggers")]
+        [AuthorizeResource(RoleResource.Risk)]
+        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        {
+            return null;
+        }
+        
+        [HttpPost("f")]
+        public void Func2()
+        {
+        }
+    }
+    public abstract class TestClass : Base
     {
         [HttpGet("{key}/riskTriggers")]
         [AuthorizeResource(RoleResource.Risk)]
