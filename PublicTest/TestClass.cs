@@ -23,7 +23,7 @@ namespace DefaultNamespace
         // {
         // }
     }
-    public class TestClass // : Base
+    public class TestClass : Base
     {
         [HttpGet("{key}/riskTriggers")]
         public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
