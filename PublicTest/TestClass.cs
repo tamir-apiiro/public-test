@@ -24,7 +24,7 @@ namespace DefaultNamespace
     //     // {
     //     // }
     // }
-    public class TestClass // : Base
+    public abstract class TestClass // : Base
     {
         [HttpPost("{key}/riskTriggers")]
         // [AuthorizeResource(RoleResource.Risk)]
