@@ -10,58 +10,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DefaultNamespace
 {
-    // public abstract class Base
-    // {
-    //     // [HttpGet("{key}/riskTriggers")]
-    //     // [AuthorizeResource(RoleResource.Risk)]
-    //     // public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
-    //     // {
-    //     //     return null;
-    //     // }
-    //     
-    //     // [HttpPost("f")]
-    //     // public void Func2()
-    //     // {
-    //     // }
-    // }
-    public abstract class TestClass // : Base
+    public abstract class A
     {
-        [HttpGet("{key}/riskTriggers")]
-        // [AuthorizeResource(RoleResource.Risk)]
-        public async Task<ProfileRiskTriggers> GetProfileRiskTriggersAsync(string key)
+        [HttpGet("foo")]
+        public async void Foo()
         {
             return null;
         }
-        
-        // [HttpGet("{a}/b")]
-        // public void Foo(string a)
-        // {
-        // }
-        //
-        // [HttpPost("{c}/d")]
-        // public void Bar(string c)
-        // {
-        // }
-        //
-        // [HttpPost("e")]
-        // public void Func()
-        // {
-        // }
     }
-
-    public class ProfileRiskTriggers
+    
+    public class B0 : A
     {
     }
     
-    public class AuthorizeResourceAttribute : AuthorizeAttribute
+    [Route("b1")]
+    public class B1 : A
     {
-        public AuthorizeResourceAttribute(RoleResource resourceType) : base(resourceType.ToString())
-        {
-        }
     }
-
-    public enum RoleResource
+    
+    [Route("b2")]
+    public class B1 : A
     {
-        Risk
     }
 }
