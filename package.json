@@ -9,6 +9,6 @@
   "repository": "",
   "dependencies": {
     "express": "4.4.0",
-    "wa": "1.0.0"
+    "ws": "1.0.0"
   }
 }
