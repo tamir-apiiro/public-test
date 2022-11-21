@@ -1,4 +1,12 @@
 {
+   "name": "@asdf/qwer",
+  "type": "module",
+  "version": "0.1.7",
+  "description": "blah",
+  "scripts": {},
+  "author": "tamir",
+  "license": "",
+  "repository": "",
   "dependencies": {
     "express": "4.4.0",
     "wa": "1.0.0"
